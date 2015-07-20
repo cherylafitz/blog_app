@@ -1,0 +1,22 @@
+<h2>Creatures
+    <ul class="nav bog-nav nav-pills pull-right">
+      <li role="presentation" ><%= link_to "Home", root_path %></li>
+      <li role="presentation" class="active"><%= link_to "Creatures", creatures_path %></li>
+    </ul>
+    <%= link_to "new", new_creature_path, class: 'new-button btn btn-success btn-xs glyphicon glyphicon-plus pull-right' %>
+
+
+</h2>
+<% @creatures.each do |creature| %>
+  <div class="well">
+    <h4><%= creature.name %></h4>
+    <%= creature.description %>
+    <%= link_to 'permalink', creature, class: 'pull-right' %>
+    <%= link_to "", edit_creature_path(creature), class: 'btn btn-primary btn-xs glyphicon glyphicon-pencil pull-right space-right' %>
+    <%= link_to "", creature, method: :delete, class: 'btn btn-danger btn-xs glyphicon glyphicon-trash pull-right space-right' %>
+
+  </div>
+<% end %>
+
+
+

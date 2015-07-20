@@ -1,0 +1,47 @@
+// Place all the styles related to the creatures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.space-right {
+  margin-right: 1em;
+}
+
+.bog-nav a {
+  font-size: initial;
+  color: #fff;
+  font-weight: normal;
+}
+.bog-nav a:hover, bog-nav a:focus {
+  color: #006666;
+  background-color: rgba(0,0,0, .5)
+}
+
+.new-button {
+    margin: .5em 1em 0 1em;
+    padding: .2em .5em;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+  background-color: #003A4F;
+}
+
+a {
+  color: #fff;
+}
+
+.well a:not(.glyphicon) {
+  color: #006E30;
+}
+
+.btn-success {
+  background-color:#00A146;
+}
+.btn-success.active {
+  border: 1px solid #00A146;
+  background-color: transparent;
+}
+.btn-primary {
+  background-color:#003A4F;
+}

@@ -1,0 +1,10 @@
+<h2>New Creature    <ul class="nav bog-nav nav-pills pull-right">
+      <li role="presentation"><%= link_to "Home", root_path %></li>
+      <li role="presentation"><%= link_to "Creatures", creatures_path %></li>
+    </ul></h2>
+
+<%= bootstrap_form_for @creature do |f| %>
+<%= f.text_field :name %>
+<%= f.text_area :description %>
+<%= f.primary %>
+<% end %>

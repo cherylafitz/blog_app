@@ -1,0 +1,8 @@
+<h2><%= @creature.name %>    <ul class="nav bog-nav nav-pills pull-right">
+      <li role="presentation"><%= link_to "Home", root_path %></li>
+      <li role="presentation"><%= link_to "Creatures", creatures_path %></li>
+    </ul></h2>
+<%= link_to "&larr; back".html_safe, creatures_path %>
+<div class="well">
+  <%= @creature.description %>
+</div>
