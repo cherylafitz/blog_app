@@ -24,24 +24,43 @@
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:focus,
 .nav-pills>li.active>a:hover {
-  background-color: #003A4F;
+  border: 2px solid #003A4F;
+  background-color: transparent;
+}
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open>.dropdown-toggle.btn-primary  {
+  background-color: #003570;
 }
 
 a {
   color: #fff;
 }
 
+.well {
+  color:#444;
+}
+
+
 .well a:not(.glyphicon) {
   color: #006E30;
 }
 
 .btn-success {
-  background-color:#00A146;
+  background-color:#00AB4A;
 }
 .btn-success.active {
   border: 1px solid #00A146;
   background-color: transparent;
 }
 .btn-primary {
-  background-color:#003A4F;
+  background-color:#002B3B;
+  border: 1px solid #003E54;
+}
+
+.panel-body {
+  color: #444;
 }

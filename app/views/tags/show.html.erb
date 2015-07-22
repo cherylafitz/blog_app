@@ -1,0 +1,7 @@
+<h2>#<%= @tag.name %></h2>
+<%= link_to "&larr; back".html_safe, creatures_path %>
+<% @tag.creatures.each do |creature| %>
+  <div class="well">
+    <%= link_to creature.name, creature %>
+  </div>
+<% end %>

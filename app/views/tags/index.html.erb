@@ -1,0 +1,12 @@
+<h1>Tags
+    <%= link_to "new", new_tag_path, class: 'new-button btn btn-success btn-xs glyphicon glyphicon-plus pull-right' %>
+</h1>
+<%= render "shared/flash" %>
+
+<% @tags.each do |tag| %>
+<div class="well">
+  <h2>#<%= link_to tag.name, tag %>
+  <%= link_to "", tag, method: :delete, class: 'btn btn-danger btn-xs glyphicon glyphicon-trash pull-right space-right' %>
+  </h2>
+</div>
+<% end %>

@@ -7,26 +7,35 @@ class CreaturesController < ApplicationController
 
   def new
     @creature = Creature.new
+    @tags = Tag.all
   end
 
   def create
     # render json: params
-    Creature.create creature_params
+    c = Creature.create creature_params
+    update_tags c
     redirect_to creatures_path
   end
 
   def show
     @creature = Creature.find params[:id]
+    @tags = @creature.tags
+
   end
 
   def edit
     @creature = Creature.find params[:id]
+    @tags = Tag.all
   end
 
   def update
     c = Creature.find params[:id]
+    c.tags.clear
     c.update creature_params
+
+    update_tags c
     redirect_to creatures_path
+
   end
 
   def destroy
@@ -36,8 +45,15 @@ class CreaturesController < ApplicationController
   end
 
   private
-
   def creature_params
     params.require(:creature).permit(:name,:description)
   end
+
+  def update_tags creature
+    creature_tags = params[:creature][:tag_ids]
+    creature_tags.each do |id|
+    creature.tags << Tag.find(id) unless id.blank?
+    end
+  end
+
 end
